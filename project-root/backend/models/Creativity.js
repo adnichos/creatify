@@ -7,7 +7,7 @@ const CreativitySchema = new mongoose.Schema({
         required: true // Nombre de la creatividad
     },
     size: {
-        type: Number, // Tamaño en bytes (por ejemplo, 2048 para 2MB)
+        type: Number, // Tamaño en kilobytes
         required: true
     },
     height: {
@@ -15,14 +15,17 @@ const CreativitySchema = new mongoose.Schema({
         required: true
     },
     width: {
-        type: Number, // Anchura en píxeles
+        type: Number, // Ancho en píxeles
         required: true
     },
     agency: {
         type: String, // Agencia asociada a la creatividad (por ejemplo, "LV", "RAC1", "MD")
         required: true
+    },
+    deviceType: {
+        type: String,  // desktop o mobile
+        required: true
     }
 });
 
-// Crear y exportar el modelo para las creatividades
 module.exports = mongoose.model('Creativity', CreativitySchema);

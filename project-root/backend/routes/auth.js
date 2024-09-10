@@ -47,7 +47,6 @@ router.post('/register', async (req, res) => {
 
 
 // Route for user login
-// Route for user login
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
